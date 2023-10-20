@@ -1,0 +1,313 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\profilesection}[2]{%
+  \vspace{0.5mm}
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \vspace{1mm} \\  
+    \parbox{\linewidth}{\textit{\footnotesize #2}}
+  \end{tabular*}
+  \vspace{-2.4mm}
+}
+
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Ilyes Bechoual} % Your Name
+\newcommand{\course}{Computer Science Major} % Your Program
+\newcommand{\phone}{652949746} % Your Phone Number
+\newcommand{\emaila}{bechoual.ilyes@gmail.com} %Email 1
+\newcommand{\emailb}{ilyes.bechoual@bordeaux-inp.fr} %Email 2
+\newcommand{\po}{\includegraphics[width=1.4cm]{logo_em.jpg}}
+\newcommand{\poo}{\includegraphics[width=1.8cm]{Caceis.png}}
+\newcommand{\pj}{\includegraphics[width=0.7cm]{jacdecour.jpg}}
+\newcommand{\pr}{\includegraphics[width=1.2cm]{Ravel.jpg}}
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont 
+%----------HEADING-----------------
+
+
+\parbox{2.5cm}{%
+\includegraphics[width=2.4cm,clip]{logo_em.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +33\phone}\\
+  {In second year of Master's degree.} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Enseirb-Matmeca} &  \href{https://github.com/Bugz-gg}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Bugz-gg}} \\
+  {Paris, Bordeaux} & \href{https://www.linkedin.com/in/ilyes-bechoual/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Ilyes Bechoual}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+%-----------PROFILE-----------
+\vspace{4mm}
+\profilesection{PROFILE:}{Student in Computer Engineering at ENSEIRB-MATMECA, seeking a 3-month internship abroad in the field of Computer Science from June to September 2024.}
+
+%
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      { Enseirb-Matmeca, Bordeaux. \hspace{9.7cm}\raisebox{-0.3\height}{\po}}{}
+      {Engineering school specializing in advanced technology and applied mathematics education.}{2022-2025}
+    \resumeSubheading
+      { Lycée Jacques Decour, Paris 9. \hspace{9.8cm}\raisebox{-0.3\height}{\pj}}{}
+      {Math Sup - Math Spé : Intensive French prep courses for engineering school entrance.}{2020-2022}
+    \resumeSubheading
+      { Lycée Maurice Ravel, Paris 20. \hspace{9.6cm}\raisebox{-0.3\height}{\pr}}{}
+      {Equivalent to an A level in science.}{2017-2020}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      { CACEIS BANK \hspace{10.5cm}\raisebox{-0.4\height}{\poo}}{Paris}
+      {IT Management Control Intern}{June - July 2023}
+      \resumeItemListStart
+        \item {Actively managed budgets and engaged in various aspects of management control, enhancing proficiency in Excel and successfully completing related tasks.}
+        \item {Developed knowledge in financial management and data analysis, contributing to the team's objectives.}
+      \resumeItemListEnd
+      
+    \vspace{-3.0mm}
+
+  \resumeSubHeadingListEnd
+\vspace{-3.5mm}
+
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\vspace{1.5mm}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      { Fluencia: AI Language Learning Tool} %Project Name
+      {Created interactive AI language tool with chat-based interface, AI model, and database integration and open-source.} %Project Description
+      {Summer 2023} %Event Dates
+
+      % Add this in the appropriate section of your resume
+      \resumeItemListStart
+        \item {Tools \& technologies used: Python, SQL, AI models, Data Base.}
+        \item {The aim of the project : Facilitated language learning through conversation-based interaction, enhancing user fluency and language acquisition skills.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+        { Amazons Game Implementation} % Project Name
+        {Implemented the Amazons board game using C.} % Project Description
+        {Jan – May 2023} % Event Dates
+    
+    \resumeItemListStart
+        \item {Developed a server application allowing multiple clients to play the Amazons game using dynamic loading of shared libraries and interprocess communication.}
+        \item {Utilized the GNU Scientific Library (GSL) to implement efficient graph representation and algorithms, employing Compressed Row Format (CSR) for optimal storage and retrieval of graph data.}
+        \item {Collaborated with team members to design and implement diverse client strategies, fostering teamwork, communication, and problem-solving skills.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      { Optimizing Trajectories to Prevent Air Disasters using Genetic Algorithms} % Project Name
+      {Optimized airplane trajectories using Genetic Algorithms during my 2 years of prep school. } % Project Description
+      {Sep 2021 – July 2022} % Event Dates
+
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Python, Genetic Algorithms.}
+        \item {Presented the project to a panel of judges.}
+        \item {Effectively communicated project findings, showcasing problem-solving abilities.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+\vspace{1.5mm}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{: \textbf{French}: Native language, \textbf{English} : B2, \textbf{Arabic}: Basic knowlegde, \textbf{Japanese}: Basic knowledge.} \\
+     \vspace{0.5mm}
+     \textbf{Developer Tools}{: C , Python, Javascript, Java, SQL, Bash, C++, LaTex, Assembly, php.} \\
+     \vspace{0.5mm}
+     \textbf{Soft Skills}{: Leadership, Strong analytical skills} \\
+     \vspace{0.5mm}
+     \textbf{Areas of Interest}{: Data Science, Math, Sport.} \\
+    }}
+ \end{itemize}
+ \vspace{-4.5mm}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\vspace{1.5mm}
+\resumePOR{ EIRSPORT, } % Position
+    {ENSEIRB School Sports Association} % Club, Event
+    {Beach Volleyball Responsible} % Tenure Period
+
+\resumeSubHeadingListEnd
+\vspace{-4.5mm}
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Hobbies}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\vspace{1.5mm}
+\resumePOR{ Sport : } % Award
+    {Volleyball, Basketball, Football, Judo.} % Event
+    {}
+\resumePOR{ Others : } % Award
+    {Reading, Travelling.} % Event
+    {}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
