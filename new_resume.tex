@@ -1,0 +1,164 @@
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+\usepackage[most]{tcolorbox}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Times New Roman}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Ilyes Bechoual} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{\underline{\href{mailto:bechoual.ilyes@gmail.com}{\raisebox{-0.05\height}{\faEnvelope} bechoual.ilyes@gmail.com}} $|$}
+\textcolor[HTML]{371e77}{\href{tel:+33652949746}{\raisebox{-0.05\height}{\faMobile} +33652949746}}
+
+\textcolor[HTML]{371e77}
+{\underline{\href{https://www.linkedin.com/in/ilyes-bechoual/}{\raisebox{-0.05\height}{\faLinkedin} LinkedIn Ilyes Bechoual}} $|$}
+\textcolor[HTML]{371e77}
+{\underline{\href{https://www.ibechoual-portfolio.codes/}{\raisebox{-0.05\height}{\faGlobe} Portfolio}} $|$}
+\textcolor[HTML]{371e77}
+{\underline{\href{https://github.com/Bugz-gg}{\raisebox{-0.05\height}{\faGithub} github.com/Bugz-gg}}}
+\end{tabularx}
+
+I am a student in Computer Engineering at ENSEIRB-MATMECA, with a focus on ML/AI and High performance computing. Currently seeking a 3 to 4 months abroad from June to September 2024.
+
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \href{https://www.bordeaux-inp.fr/en}{\textbf{Enseirb-Matmeca, Bordeaux.}} & \hfill \color[HTML]{371e77} Expected graduation date: Jun. 2025 \\
+\color[HTML]{371e77} Engineering school specializing in computer science. $|$ {\uline{\href{https://ccc.bordeaux-inp.fr/syllabus/index.php?mode=consulation&chemin=74663_74369&langue=2&annee=2023}{Link to all courses}}} \\
+\multicolumn{2}{@{}X@{}}{Relevant Courses: 
+ System programming (C), Functional Programming (JS), OOP (C++ \& Java), 
+ \newline \hspace*{16ex} Algorithms and Data Structures (C \& JS), Software development (JS, SQL), Network Programming (C, Go) 
+ \newline \hspace*{16ex} Cryptology (Python), AI (computation of heuristics, automatic reasoning algorithms)
+ \newline \hspace*{16ex} Data Science Statistics (Python), Deep Learning \& Machine Learning (Pytorch).} \\  \\
+
+\color[HTML]{1C033C} \textbf{Preparatory School Jacques Decour, Paris.} & \hfill \color[HTML]{371e77} 2020-2022 \\
+\multicolumn{2}{@{}X@{}}{Completed an intensive two-year Math Sup - Math Spé program, rigorously preparing for selective entrance examinations to French engineering schools. Studied a diverse curriculum covering subjects such as Algebra, Analysis, Probability, Mechanics, Chemistry, Electromagnetism, Thermodynamics, Algorithms, and more.}
+\end{tabularx}
+
+% Experience
+\section{Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{\href{https://www.linkedin.com/company/caceis/}{CACEIS BANK}}} \hfill \color[HTML]{371e77} June - July 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{IT Management Control Intern}}\ \hfill \color[HTML]{4B28A4} \textit{Excel} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Explored company operations, assisted in budget management, and enhanced Excel proficiency. Established a practical link between my engineering major and real-world IT management, contributing to team objectives.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% Projects
+\section{Projects}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://www.ibechoual-portfolio.codes/work/mirc}{ RDBMS - Campus Carpooling Project}}} \hfill \color[HTML]{371e77} Oct -- Dec 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Database Management System app.}} \hfill \color[HTML]{4B28A4} \textit{JavaScript, SQL, HTML, CSS, Git, Azure} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed a Database Management System for the academic "MIRC" project, a school project to implement shared rides among students on campus.
+        \item Implemented CI/CD pipeline integration via GitHub Actions to automate deployment into Azure.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://www.ibechoual-portfolio.codes/work/fluencia}{Fluencia: AI Language Learning Tool}}} \hfill \color[HTML]{371e77} Summer 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Interactive AI language tool with chat-based interface and open-source.}} \hfill \color[HTML]{4B28A4} \textit{Python, SQL, AI API (GCP), Database} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Created a chat-based AI language tool to facilitate language learning through conversation-based interaction, enhancing user fluency and language acquisition skills.
+        \item Integrated AI models, chat-based interface, and database for a comprehensive language learning experience.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://www.ibechoual-portfolio.codes/work/nested/amazon_game}{Amazons Game Implementation}}} \hfill \color[HTML]{371e77} Jan – May 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Implementation of the Amazons board game using C.}} \hfill \color[HTML]{4B28A4} \textit{C, Git, GNU Scientific Library (GSL)} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed a server application enabling multiple clients to play the Amazons game using dynamic loading of shared libraries and interprocess communication, implementation of a bot with an heuristic to play against other teams.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \uline{\textbf{{Optimizing Trajectories to Prevent Air Disasters}}} \hfill \color[HTML]{371e77} Sep 2021 – July 2022 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Optimized airplane trajectories using Genetic Algorithms during preparatory school.}} \hfill \color[HTML]{4B28A4} \textit{Python, Genetic Algorithms} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Presented the project to a panel of judges, effectively communicating, findings and showcasing problem-solving abilities.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Programming Languages:} \\[2pt]
+\color[HTML]{371e77} \hspace*{4ex} Python, C, C++, Go, Java, JavaScript, Bash.\\[3pt]
+\color[HTML]{1C033C}\textbf{Technologies \& Tools:} \\[2pt]
+\color[HTML]{371e77} \hspace*{4ex} Git, Linux,  RDBMS, Pytorch, Azure, CI/CD, NeoVim, VSCode\\[3pt]
+\color[HTML]{1C033C}
+\color[HTML]{1C033C}\textbf{Languages:}\\[2pt]
+\color[HTML]{371e77} \hspace*{4ex} French: Native language, English : \href{https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages}{C1/ B2}, Japanese: A1, Spanish : B1.\\[3pt]
+\color[HTML]{1C033C}
+\textbf{Certifications:} \\[2pt]
+\color[HTML]{371e77} \hspace*{4ex} \uline{\href{https://www.etsglobal.org/fr/en/digital-score-report/BC40227910E1EABF669216AA9C683841118BC0B96B995BE953A367EAC7EDB784aHBBOGFBQnFyU3ViNTBoRXBjQ2Rmekt3VkdxOHIzRzBZTGpWNFVGYytuUnZ0TTdS}{TOEIC Certification}}. \\[3pt]
+\end{document}
